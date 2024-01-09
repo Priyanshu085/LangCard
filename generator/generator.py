@@ -1,4 +1,3 @@
-# generator/generator.py
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
@@ -38,20 +37,20 @@ def generate_flashcards(words_list, font_size):
   return flashcards
 
 def generate_pdf(output_file, flashcards):
-    """
-    Generate a PDF file containing flashcards.
+  """
+  Generate a PDF file containing flashcards.
 
-    Args:
-        output_file (str): Path to the output PDF file.
-        flashcards (list): List of strings representing flashcards.
-    """
-    pdf_canvas = canvas.Canvas(output_file, pagesize=letter)
+  Args:
+      output_file (str): Path to the output PDF file.
+      flashcards (list): List of strings representing flashcards.
+  """
+  pdf_canvas = canvas.Canvas(output_file, pagesize=letter)
 
-    # Set font size for the flashcards
-    pdf_canvas.setFont("Helvetica", 12)
+  # Set font size for the flashcards
+  pdf_canvas.setFont("Helvetica", 12)
 
-    # Write flashcards to the PDF
-    for i, flashcard in enumerate(flashcards, start=1):
-        pdf_canvas.drawString(50, 750 - i * 50, flashcard)
+  # Write flashcards to the PDF
+  for i, flashcard in enumerate(flashcards, start=1):
+      pdf_canvas.drawString(50, 750 - i * 50, flashcard)
 
-    pdf_canvas.save()
+  pdf_canvas.save()
