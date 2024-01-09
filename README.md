@@ -33,6 +33,8 @@ The command-line interface supports the following arguments:
 - **Input File (`input_file`):** Path to the input file containing words and translations.
 - **Output File (`output_file`):** Path to the output PDF file (default: flashcards.pdf).
 - **Font Size (`font_size`):** Font size for the flashcards (default: 12).
+- **Layout (`layout`):** Layout for the flashcards, either "Classic", "Boxes", or "Subdiv" (default: Classic).
+- **Color (`color`):** Color for text in the flashcards, in the HEX format provided as a string (with brackets) (default: #000000).
 
 Example:
 

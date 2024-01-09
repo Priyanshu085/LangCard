@@ -20,5 +20,16 @@ def parse_arguments():
       default=12,
   )
   # Add more customization options as needed
+  parser.add_argument(
+      "--color",
+      help="Color for the flashcards in hex format (default: #000000)",
+      default="#000000",
+  )
+  parser.add_argument(
+      "--layout",
+      choices=["Classic", "Boxes", "Subdiv"],
+      help="Layout for the flashcards (default: Classic)",
+      default="Classic",
+  )
 
   return parser.parse_args()
