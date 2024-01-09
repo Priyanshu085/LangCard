@@ -12,7 +12,7 @@ def main():
     flashcards = generator.generate_flashcards(words_list, args.font_size)
 
     # Generate PDF
-    generator.generate_pdf(args.output_file, flashcards)
+    generator.generate_pdf(args.output_file, flashcards, args.color, args.layout)
 
     print(f"Flashcards generated successfully. PDF saved to: {args.output_file}")
 
